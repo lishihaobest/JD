@@ -1,0 +1,17 @@
+@charset "utf-8";
+//导入变量
+@import 'var';
+//导入混合
+@import 'mixin';
+//导入通用
+@import 'public';
+//导入字体
+@import 'font';
+//顶部 
+@import 'top';
+//头部
+@import 'header';
+//测试
+@import 'test';
+//脚部
+@import 'footer';

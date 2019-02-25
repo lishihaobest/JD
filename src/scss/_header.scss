@@ -1,0 +1,73 @@
+@charset "utf-8";
+.header-main{
+	height: 140px;
+	position: relative;
+}
+/* LOGO开始 */
+#logo{
+	position: absolute;
+	z-index: 2;
+    left: 0;
+    top: -31px;
+    width: 190px;
+    height: 170px;
+	box-shadow: 0 -12px 10px rgba(0,0,0,.2);
+    background-color: #fff;
+    border-bottom:1px solid #ededed;
+	.logo-a{
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		overflow: hidden;
+		display: block;
+		width: 190px;
+		height: 170px;
+		background-image: url(../img/sprite.head.png);
+		/* background-image: url(../img/5b5ede77Nb463ad3c.gif); */
+		/* JS触摸后图 */
+		font-size: 0;
+		.logo-text{
+			position: absolute;
+		left: 35px;
+		bottom: 77px;
+		display: inline-block;
+		width: 120px;
+		font-size: 16px;
+		line-height: 16px;
+		font-weight: bold;
+		background: transparent;
+		text-align: center;
+		color:$logo-color;
+		}
+		.logo-btn{
+			color:$logo-color;
+			background-color: rgb(255, 255, 255);
+			position: absolute;
+			width: 60px;
+			height: 20px;
+			top: 105px;
+			left: 50%;
+			margin-left: -32px;
+			text-indent: 4px;
+			font-size: 12px;
+			line-height: 20px;
+			border-radius: 11px;
+			text-align: center;
+		}
+	}
+}
+
+/* logo结束 */
+.header-right{
+	position:absolute;
+	left:190px;
+	top: 0px;
+	width: 1000px;
+	height:140px 
+}
+/* 搜索框 */
+
+/* 购物车 */
+
+/* 搜索热词 */
+
+/* 导航 */

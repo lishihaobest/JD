@@ -1,0 +1,33 @@
+@charset "utf-8";
+.top{
+	border-bottom: 1px solid #ddd;
+    background-color: #e3e4e5;
+	.top-main{
+		height: 30px;
+		line-height: 30px;
+		color: #999;
+		a{
+			color: #999;
+		}
+		.top-left{
+			width: 258px;
+			height: 30px;
+		}
+		.top-right{
+			width:720px;
+			height: 30px;
+			.ta{
+				padding-left: 7px;
+				padding-right: 7px;
+			}
+			.spacer{
+				overflow: hidden;
+				margin: 11px 5px 0;
+				width: 1px;
+				height: 10px;
+				background-color: #ccc;
+			}
+		}
+	}    
+		
+}

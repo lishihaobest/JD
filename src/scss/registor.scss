@@ -1,0 +1,257 @@
+
+@charset "utf-8";
+@import 'public';
+
+body {
+    font: 14px/150% tahoma,arial,Microsoft YaHei,Hiragino Sans GB,"\u5b8b\u4f53",sans-serif;
+    color: #666;
+    background: #fff;
+}
+input {
+    outline: none;
+    border: none;
+}
+.header{
+	height: 110px;
+    background:url(//misc.360buyimg.com/user/reg/3.0.0/css/i/headbg.jpg) repeat-x left bottom;
+	.w{
+		width: 1210px;
+		margin: 0 auto;
+		.logopic{
+			width: 160px;
+			height: 50px;
+			float: left;
+			margin-top: 24px;
+			background: url(//misc.360buyimg.com/user/reg/3.0.0/css/i/icon.png) no-repeat;
+		}
+		.logo-title{
+			float: left;
+			height: 34px;
+			line-height: 34px;
+			font-size: 24px;
+			color: #333;
+			margin-top: 34px;
+		}
+		.login{
+			    font-size: 16px;
+				float: right;
+				margin-top: 55px;
+				color: #999;
+			a{
+				color: #e22;
+				&:hover{
+					color: #c81623;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}	
+.process{
+	position: relative;
+    margin: 80px auto 0;
+    width: 400px;
+	span{
+		color: #fff;
+		font-size: 12px;
+		font-weight: 700;
+		margin: 0 auto;
+		display: block;
+		width: 24px;
+		height: 24px;
+		line-height: 24px;
+	}
+	p{
+		margin-top: 10px;
+		font-size: 12px;
+		color: #3b4;
+	}
+	.no1{
+		float: left;
+		text-align: center;
+		span{
+			background: url(//misc.360buyimg.com/user/reg/3.0.0/css/i/reg-icon.png) no-repeat;
+			background-position: 0 -200px;
+		}	
+	}
+	.line{
+		background: url(//misc.360buyimg.com/user/reg/3.0.0/css/i/reg-icon.png) no-repeat;
+		height: 10px;
+		width: 124px;
+		background-position: 0 -100px;
+		position: absolute;
+		top: 7px;
+		left: 55px;
+	}
+	.line2{
+		left: 228px;
+	}
+	.no2{
+		margin-left: 106px;
+		float: left;
+		text-align: center;
+		span{
+			background: url(//misc.360buyimg.com/user/reg/3.0.0/css/i/reg-icon.png) no-repeat;
+			background-position: -45px -200px;
+			color: #ccc;
+		}
+		p{
+			color: #ccc;
+		}
+	}
+	.no3{
+		margin-left: 112px;
+		float: left;
+		text-align: center;
+		span{
+			background: url(//misc.360buyimg.com/user/reg/3.0.0/css/i/reg-icon.png) no-repeat;
+			background-position: -45px -200px;
+			color: #ccc;
+		}
+		p{
+			color: #ccc;
+		}
+	}
+}
+	
+
+.container{
+	margin-top: 150px
+}
+.register {
+	width: 400px;
+	margin: 0 auto;
+	padding-top: 40px;
+	position: relative; 
+}
+
+.register-box {
+	width: 100%;
+	height: 52px;
+	padding-bottom: 30px;
+	.box {
+		width: 100%;
+		height: 100%;
+		line-height: 52px;
+		padding-left: 10px;
+		border: 1px solid #ccc;
+		position: relative; 
+	}
+	.box.error {
+		border: 1px solid red; 
+	}
+	.box input {
+		width: 200px;
+		font-size: 16px;
+		padding-left: 20px;
+	}
+	.box.right i {
+		width: 20px;
+		height: 20px;
+		background: url(../img/right.png) no-repeat center center;
+		position: absolute;
+		top: 50%;
+		margin-top: -10px;
+		right: 10px; 
+	}
+	.tip {
+		width: 100%;
+		line-height: 30px;
+		font-size: 12px; 
+		i {
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+			vertical-align: middle; 
+		}
+	span {
+		color: #CCCCCC; 
+	}	
+	}
+}
+
+
+.register-box .tip.hide {
+	display: none; 
+}
+
+.register-box .tip.default i {
+	background: url(../img/default.png) no-repeat center center; 
+}
+
+.register-box .tip.default span {
+	color: #ccc; 
+}
+
+.register-box .tip.error i {
+	background: url(../img/error.png) no-repeat center center; 
+}
+
+.register-box .tip.error span {
+	color: red;
+}
+
+.register-box .tip.ruo i {
+	background: url(../img/ruo.png) no-repeat center center; 
+}
+
+.register-box .tip.zhong i {
+	background: url(../img/zhong.png) no-repeat center center;
+}
+
+.register-box .tip.qiang i {
+	background: url(../img/qiang.png) no-repeat center center; 
+}
+
+.register-box.xieyi {
+	width: 100%;
+	height: 20px;
+	padding-bottom: 30px; 
+}
+
+.register-box.xieyi .box {
+	line-height: normal;
+	padding: 0;
+	border: none; 
+}
+
+.register-box.xieyi .box.error {
+	line-height: normal;
+	padding: 0;
+	border: 1px solid red;
+ }
+
+.register-box.xieyi .box input {
+	width: auto;
+}
+
+.register button {
+	width: 412px;
+	height: 54px;
+	font-size: 18px;
+	line-height: 54px;
+	color:white;
+	background-color: red;
+	outline-color: white; 
+	border: none;
+}
+
+.register button:hover {
+	background-color: darkred; 
+}
+
+#footer {
+	padding-top:30px;
+    padding-bottom:30px;
+	text-align:center;
+	font-size: 12px;
+	color: #999;
+}
+#footer .links a, #footer .links span {
+    margin: 0 10px;
+	color: #999;
+}
+#footer .copyright {
+    margin: 10px 0;
+	color: #999;
+}

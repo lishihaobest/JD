@@ -1,0 +1,433 @@
+@charset "UTF-8";
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+.wrapper {
+  width: 1190px;
+  margin: 0 auto;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+a img {
+  border: 0;
+}
+
+body {
+  font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
+  background: #f0f3ef;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+img {
+  border: 0;
+  display: block;
+}
+
+.cw-icon {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  float: left;
+  border: 1px solid #e3e4e5;
+}
+
+.btn-img, .button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: impact;
+  src: url(../fonts/impact.eot);
+  src: url(../fonts/impact.eot?#iefix) format("embedded-opentype"), url(../fonts/impact.woff) format("woff"), url(../fonts/impact.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: fzzzh;
+  src: url(../fonts/fzzzh.eot);
+  src: url(../fonts/fzzzh.eot?#iefix) format("embedded-opentype"), url(../fonts/fzzzh.woff) format("woff"), url(../fonts/fzzzh.ttf) format("truetype"), url(../images/fzzzh.svg) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: iconfont;
+  src: url(../fonts/iconfont.eot);
+  src: url(../fonts/iconfont.eot?#iefix) format("embedded-opentype"), url(../fonts/iconfont.woff) format("woff"), url(../fonts/iconfont.ttf) format("truetype"), url(iconfont.svg#iconfont) format("svg");
+}
+.iconfont {
+  font-family: iconfont,sans-serif;
+  font-style: normal;
+  -webkit-text-stroke-width: .2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.top {
+  border-bottom: 1px solid #ddd;
+  background-color: #e3e4e5;
+}
+.top .top-main {
+  height: 30px;
+  line-height: 30px;
+  color: #999;
+}
+.top .top-main a {
+  color: #999;
+}
+.top .top-main .top-left {
+  width: 258px;
+  height: 30px;
+}
+.top .top-main .top-right {
+  width: 720px;
+  height: 30px;
+}
+.top .top-main .top-right .ta {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.top .top-main .top-right .spacer {
+  overflow: hidden;
+  margin: 11px 5px 0;
+  width: 1px;
+  height: 10px;
+  background-color: #ccc;
+}
+
+.header-main {
+  height: 140px;
+  position: relative;
+}
+
+/* LOGO开始 */
+#logo {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: -31px;
+  width: 190px;
+  height: 170px;
+  box-shadow: 0 -12px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-bottom: 1px solid #ededed;
+}
+#logo .logo-a {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  overflow: hidden;
+  display: block;
+  width: 190px;
+  height: 170px;
+  background-image: url(../img/sprite.head.png);
+  /* background-image: url(../img/5b5ede77Nb463ad3c.gif); */
+  /* JS触摸后图 */
+  font-size: 0;
+}
+#logo .logo-a .logo-text {
+  position: absolute;
+  left: 35px;
+  bottom: 77px;
+  display: inline-block;
+  width: 120px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  background: transparent;
+  text-align: center;
+  color: #8e513f;
+}
+#logo .logo-a .logo-btn {
+  color: #8e513f;
+  background-color: white;
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  top: 105px;
+  left: 50%;
+  margin-left: -32px;
+  text-indent: 4px;
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 11px;
+  text-align: center;
+}
+
+/* logo结束 */
+.header-right {
+  position: absolute;
+  left: 190px;
+  top: 0px;
+  width: 1000px;
+  height: 140px;
+}
+
+/* 搜索框 */
+/* 购物车 */
+/* 搜索热词 */
+/* 导航 */
+.selection_1 {
+  height: 480px;
+  width: 1190px;
+  margin: 0 auto;
+  background: lightyellow;
+}
+
+.selection_2 {
+  height: 275px;
+  width: 1190px;
+  margin: 0 auto;
+  background: orangered;
+}
+
+.selection_3 {
+  height: 900px;
+  width: 1190px;
+  margin: 0 auto;
+  background: lightyellow;
+}
+
+.selection_4 {
+  height: 1350px;
+  width: 1190px;
+  margin: 0 auto;
+  background: orangered;
+}
+
+.footer a {
+  color: #666;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #C81623;
+}
+
+.mod_service {
+  padding: 30px 0;
+  border-bottom: 1px solid #DEDEDE;
+}
+
+.mod_service_list {
+  overflow: hidden;
+  height: 42px;
+}
+
+.mod_service_item {
+  float: left;
+  width: 297px;
+}
+
+.mod_service_unit {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 45px;
+  width: 180px;
+}
+
+.mod_service_duo {
+  background-position: 0 0;
+}
+
+.mod_service_tit {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 36px;
+  height: 42px;
+  background-image: url(../img/2.png);
+  text-indent: -999px;
+}
+
+.mod_service_txt {
+  overflow: hidden;
+  width: 100%;
+  height: 42px;
+  line-height: 42px;
+  font-size: 18px;
+  font-weight: 700;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #444;
+}
+
+.mod_help {
+  padding: 20px 0;
+}
+
+.mod_help_list {
+  overflow: hidden;
+  height: 160px;
+}
+
+.mod_help_nav {
+  float: left;
+  width: 198px;
+  line-height: 22px;
+}
+
+.mod_help_nav_tit {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.mod_help_cover {
+  float: right;
+  width: 200px;
+  height: 150px;
+  background: url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/images/ico_footer.png) no-repeat 0 0;
+}
+
+.mod_help_cover_tit {
+  margin-bottom: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.mod_help_cover_con {
+  padding: 0 10px;
+}
+
+.mod_help_cover_more {
+  text-align: right;
+}
+
+.mod_copyright_inner {
+  padding: 15px 0;
+  border-top: 1px solid #E1E1E1;
+  text-align: center;
+}
+
+.mod_copyright_split {
+  margin: 0 10px;
+  color: #CCC;
+}
+
+.mod_copyright_info {
+  padding: 10px 0;
+  line-height: 22px;
+  color: #999;
+}
+
+.mod_copyright_info a {
+  color: #999;
+}
+
+.mod_copyright_auth_ico_1 {
+  background-position: 0 -151px;
+}
+
+.mod_copyright_auth_ico {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 3px;
+  width: 103px;
+  height: 32px;
+  background-image: url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/images/ico_footer.png);
+  line-height: 1000px;
+}
+
+.mod_copyright_auth_ico_2 {
+  background-position: -104px -151px;
+}
+
+.mod_copyright_auth_ico {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 3px;
+  width: 103px;
+  height: 32px;
+  background-image: url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/images/ico_footer.png);
+  line-height: 1000px;
+}
+
+.mod_copyright_auth_ico_3 {
+  background-position: 0 -184px;
+}
+
+.mod_copyright_auth_ico {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 3px;
+  width: 103px;
+  height: 32px;
+  background-image: url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/images/ico_footer.png);
+  line-height: 1000px;
+}
+
+.mod_copyright_auth_ico_4 {
+  background-position: -104px -184px;
+}
+
+.mod_copyright_auth_ico {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 3px;
+  width: 103px;
+  height: 32px;
+  background-image: url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/images/ico_footer.png);
+  line-height: 1000px;
+}
+
+.mod_copyright_auth_ico_5 {
+  background-position: 0 -217px;
+}
+
+.mod_copyright_auth_ico {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 3px;
+  width: 103px;
+  height: 32px;
+  background-image: url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/images/ico_footer.png);
+  line-height: 1000px;
+}
+
+.mod_copyright_auth_ico_6 {
+  background-position: -104px -217px;
+}
+
+.mod_copyright_auth_ico {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 3px;
+  width: 103px;
+  height: 32px;
+  background-image: url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/images/ico_footer.png);
+  line-height: 1000px;
+}
+
+/*# sourceMappingURL=index.css.map */

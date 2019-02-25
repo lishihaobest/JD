@@ -1,0 +1,34 @@
+.floorhd {
+  height: 65px;
+  }
+.floorhd_tit,
+.floorhd_tit_empty {
+  position: relative;
+  width: 150px;
+  height: 45px;
+  font-size: 28px;
+  font-family: 'fzzzh', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  line-height: 45px;
+  padding: 0 50px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  color: #222; 
+  }
+.floorhd_tit:before,
+.floorhd_tit:after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  display: block;
+  background: #222;
+  top: 19px; 
+  }
+.floorhd_tit:before {
+  left: 0; 
+  }
+.floorhd_tit:after {
+  right: 0;
+  }
