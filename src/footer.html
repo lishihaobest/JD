@@ -1,124 +1,222 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html>
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<meta name="description" content="京东JD.COM-专业的综合网上购物商城，为您提供正品低价的购物选择、优质便捷的服务体验。商品来自全球数十万品牌商家，囊括家电、手机、电脑、服装、居家、母婴、美妆、个护、食品、生鲜等丰富品类，满足各种购物需求。" />
-		<meta name="Keywords" content="网上购物,网上商城,家电,手机,电脑,服装,居家,母婴,美妆,个护,食品,生鲜,京东" />
-		<title>JD</title>
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/index.css">
-
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.mod_service {
+				padding: 30px 0;
+				border-bottom: 1px solid #DEDEDE;
+			}
+			.footer{
+				background: #f0f3ef;
+			}
+			.mod_service_list {
+				overflow: hidden;
+				height: 42px;
+			}
+			
+			.mod_service_item {
+				float: left;
+				width: 297px;
+			}
+			
+			.mod_service_unit {
+				position: relative;
+				margin: 0 auto;
+				padding-left: 45px;
+				width: 180px;
+			}
+			.mod_service_duo {
+				background-position: 0 0;
+			}
+			.mod_service_kuai {
+				background-position: 0 -42px;
+			}
+			.mod_service_hao {
+				background-position: 0 -85px;
+			}
+			.mod_service_sheng {
+				background-position: 0 -128px;
+			}
+			
+			.mod_service_tit {
+				overflow: hidden;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 36px;
+				height: 42px;
+				background-image: url(img/2.png);
+				text-indent: -999px;
+			}
+			
+			.mod_service_txt {
+				overflow: hidden;
+				width: 100%;
+				height: 42px;
+				line-height: 42px;
+				font-size: 18px;
+				font-weight: 700;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				color: #444;
+			}
+			
+			.mod_help {
+				padding: 20px 0;
+			}
+			
+			.mod_help_list {
+				overflow: hidden;
+				height: 160px;
+			}
+			
+			.mod_help_nav {
+				float: left;
+				width: 198px;
+				line-height: 22px;
+				font-weight: bold;
+			}
+			.mod_help_nav h5{
+				font-weight: bold;
+			}
+			.mod_help_nav_tit {
+				margin-bottom: 5px;
+				font-size: 14px;
+			}
+			
+			.mod_help_cover {
+				float: right;
+				width: 200px;
+				height: 150px;
+				background: url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/images/ico_footer.png) no-repeat 0 0;
+			}
+			
+			.mod_help_cover_tit {
+				margin-bottom: 15px;
+				font-size: 14px;
+				text-align: center;
+			}
+			
+			.mod_help_cover_con {
+				padding: 0 10px;
+			}
+			
+			.mod_help_cover_more {
+				text-align: right;
+			}
+			
+			.mod_copyright_inner {
+				padding: 15px 0;
+				border-top: 1px solid #E1E1E1;
+				text-align: center;
+			}
+			
+			.mod_copyright_split {
+				margin: 0 10px;
+				color: #CCC;
+			}
+			
+			.mod_copyright_info {
+				padding: 10px 0;
+				line-height: 22px;
+				color: #999;
+			}
+			
+			.mod_copyright_info a {
+				color: #999;
+			}
+			
+			.mod_copyright_auth_ico_1 {
+				background-position: 0 -151px;
+			}
+			
+			.mod_copyright_auth_ico {
+				overflow: hidden;
+				display: inline-block;
+				margin: 0 3px;
+				width: 103px;
+				height: 32px;
+				background-image: url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/images/ico_footer.png);
+				line-height: 1000px;
+			}
+			
+			.mod_copyright_auth_ico_2 {
+				background-position: -104px -151px;
+			}
+			
+			.mod_copyright_auth_ico {
+				overflow: hidden;
+				display: inline-block;
+				margin: 0 3px;
+				width: 103px;
+				height: 32px;
+				background-image: url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/images/ico_footer.png);
+				line-height: 1000px;
+			}
+			
+			.mod_copyright_auth_ico_3 {
+				background-position: 0 -184px;
+			}
+			
+			.mod_copyright_auth_ico {
+				overflow: hidden;
+				display: inline-block;
+				margin: 0 3px;
+				width: 103px;
+				height: 32px;
+				background-image: url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/images/ico_footer.png);
+				line-height: 1000px;
+			}
+			
+			.mod_copyright_auth_ico_4 {
+				background-position: -104px -184px;
+			}
+			
+			.mod_copyright_auth_ico {
+				overflow: hidden;
+				display: inline-block;
+				margin: 0 3px;
+				width: 103px;
+				height: 32px;
+				background-image: url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/images/ico_footer.png);
+				line-height: 1000px;
+			}
+			
+			.mod_copyright_auth_ico_5 {
+				background-position: 0 -217px;
+			}
+			
+			.mod_copyright_auth_ico {
+				overflow: hidden;
+				display: inline-block;
+				margin: 0 3px;
+				width: 103px;
+				height: 32px;
+				background-image: url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/images/ico_footer.png);
+				line-height: 1000px;
+			}
+			
+			.mod_copyright_auth_ico_6 {
+				background-position: -104px -217px;
+			}
+			
+			.mod_copyright_auth_ico {
+				overflow: hidden;
+				display: inline-block;
+				margin: 0 3px;
+				width: 103px;
+				height: 32px;
+				background-image: url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/images/ico_footer.png);
+				line-height: 1000px;
+			}
+		</style>
 	</head>
 	<body>
-		<!-- 顶部 -->
-		<div class="top">
-			<div class="top-main wrapper">
-				<ul class="top-left fl">
-					<li class="fr">
-						<i><em class="iconfont" style="color:#C81623;"> </em>北京</i>
-						<!-- 二级导航 -->
-						<div></div>
-					</li>
-				</ul>
-
-				<ul class="top-right fr">
-					<li class="fl" id="topright-1">
-						<a target="_blank" href="login.html" class="link-login ">你好，请登录</a>&nbsp;&nbsp;<a href="registor.html" class="link-regist style-red" style="color:#C81623;">免费注册</a>
-					</li>
-					<li class="fl" id="topright-2">
-						<div><a target="_blank" href="javascript:;" class="ta">我的订单</a></div>
-					</li>
-					<li class="fl" id="topright-3">
-						<div><a target="_blank" href="javascript:;" class="ta">我的京东<i class="iconfont">&#xe605;</i></a></div>
-						<!-- 二级导航 -->
-						<div></div>
-					</li>
-					<li class="spacer fl"></li>
-					<li class="fl" id="topright-4">
-						<div><a target="_blank" href="javascript:;" class="ta">京东会员</a></div>
-					</li>
-					<li class="spacer fl"></li>
-					<li class="fl" id="topright-5">
-						<div><a target="_blank" href="javascript:;" class="ta">企业采购<i class="iconfont">&#xe605;</i></a></div>
-						<!-- 二级导航 -->
-						<div></div>
-					</li>
-					<li class="spacer fl"></li>
-					<li class="fl" id="topright-6" class="ta">
-						<div class="ta">客户服务<i class="iconfont">&#xe605;</i></div>
-						<!-- 二级导航 -->
-						<div></div>
-					</li>
-					<li class="spacer fl"></li>
-					<li class="fl" id="topright-7">
-						<div class="ta">网站导航<i class="iconfont">&#xe605;</i></div>
-						<!-- 二级导航 -->
-						<div></div>
-					</li>
-					<li class="spacer fl"></li>
-					<li class="fl" id="J_mobile">
-						<div class="ta">手机京东</div>
-						<!-- 三个大二维码 -->
-						<div>
-							<div></div>
-						</div>
-						<!-- 小二维码 -->
-						<div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<!-- 顶部结束 -->
-		<!-- 头部 -->
-		<div class="header">
-			<div class="header-main wrapper">
-				<!--头部LOGO-->
-				<div class="logo" id="logo">
-					<a class="logo-a" href="#">
-						<span class="logo-text">好书不容错过</span>
-						<span class="logo-btn">去看看</span>
-					</a>
-				</div>
-				<div class="header-right">
-					<!-- 搜索框 -->
-					<div class="search">
-						<button class="button"><i class="iconfont"></i></button>
-					</div>
-					<!-- 购物车 -->
-					<div class="card">
-						
-					</div>
-					<!-- 热词 -->
-					<div class="hotword">
-						
-					</div>
-					<!-- 导航 -->
-					<div class="nav">
-						
-					</div>
-					
-				</div>
-			</div>
-		</div>
-		<!-- 主体 -->
-		<div class="selection_1">内容1 导航 轮播</div>
-
-		<div class="selection_2">内容2 秒杀</div>
-
-		<div class="selection_3">内容3 6个寻觅好货</div>
-
-		<div class="selection_4">内容4 9个时尚先锋</div>
-
-		<div class="selection_5"></div>
-
-		<!-- 底部 -->
-		<!-- 	京东底部-->
 		<div id="J_footer" class="footer">
 			<!--服务导航-->
-			<div class="mod_service wrapper">
+			<div class="mod_service w">
 				<div class="grid_c1 mod_service_inner">
 					<ul class="mod_service_list">
 						<li class="mod_service_item">
@@ -149,7 +247,7 @@
 				</div>
 			</div>
 			<!--服务帮助-->
-			<div class="mod_help wrapper">
+			<div class="mod_help w">
 				<div class="grid_c1 mod_help_inner">
 					<div class="mod_help_list">
 						<div class="mod_help_nav">
@@ -294,12 +392,11 @@
 						<p>
 							<a href="javascript:;">京公网安备 11000002000088号</a><span class="mod_copyright_split">|</span><span>京ICP证070359号</span><span
 							 class="mod_copyright_split">|</span>
-							<a href="javascript:;">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a><span
-							 class="mod_copyright_split">|</span><span>新出发京零&nbsp;字第大120007号</span></p>
+							<a href="javascript:;">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a><span class="mod_copyright_split">|</span><span>新出发京零&nbsp;字第大120007号</span></p>
 						<p><span>互联网出版许可证编号新出网证(京)字150号</span><span class="mod_copyright_split">|</span>
 							<a href="javascript:;">出版物经营许可证</a><span class="mod_copyright_split">|</span>
 							<a href="javascript:;">网络文化经营许可证京网文[2014]2148-348号</a><span class="mod_copyright_split">|</span><span>违法和不良信息举报电话：4006561155</span></p>
-						<p><span>Copyright&nbsp;©&nbsp;2004&nbsp;-&nbsp;2018&nbsp;&nbsp;京东JD.com&nbsp;版权所有</span><span class="mod_copyright_split">|</span><span>消费者维权热线：4006067733</span>
+						<p><span>Copyright&nbsp;©&nbsp;2004&nbsp;-&nbsp;2019&nbsp;&nbsp;京东JD.com&nbsp;版权所有</span><span class="mod_copyright_split">|</span><span>消费者维权热线：4006067733</span>
 							<a href="javascript:;" class="mod_copyright_license">经营证照</a>
 						</p>
 						<p><span>京东旗下网站：</span>
@@ -318,6 +415,5 @@
 				</div>
 			</div>
 		</div>
-		
 	</body>
 </html>

@@ -1,279 +1,423 @@
-//地理位置
-//wukuang  为css中  挡住二级导航的样式类
-$('#ttbar-mycity ').hover(function(){
-	$('#ttbar-mycity .adress').addClass("wukuang");
-	$('#ttbar-mycity  .dd').css("display","block");
-},function(){
-	$('#ttbar-mycity  .dd').css("display","none");
-	$('#ttbar-mycity  .adress').removeClass("wukuang");	
-});
-//点击地理位置切换文字
-//selected 为CSS中 选中地址加红色背景
-$('#ttbar-mycity .adressbox a').on('click',function(){
-	$('#ttbar-mycity .adressbox a').removeClass('selected');
-	$(this).addClass('selected');
-	$('#ttbar-mycity .adresstext').html($(this).html());
-	$('#ttbar-mycity  .dd').css("display","none");
-})
-//顶部导航触摸效果
-$('#myjd').hover(function(){
-	$('#myjd .dt').addClass("wukuang");
-	$('#myjd .dd').css("display","block");
-	
-},function(){
-	$('#myjd .dd').css("display","none");
-	$('#myjd .dt').removeClass("wukuang");	
-});
-$('#serv').hover(function(){
-	$('#serv .dd').css("display","block");
-	//$('#serv .dt').css({"background":"white","height":"30px","border":"1px solid #ccc","border-bottom":"1px solid #fff"});
-	$('#serv .dt').addClass("wukuang");
-},function(){
-	$('#serv .dd').css("display","none");
-	$('#serv .dt').removeClass("wukuang");
-	
-});
-$('#navs').hover(function(){
-	$('#navs .dd').css("display","block");
-	$('#navs .dt').addClass("wukuang");
-	
-},function(){
-	$('#navs .dd').css("display","none");
-	$('#navs .dt').removeClass("wukuang");
-	
-});
-/* $('a').hover(function(){
-	$(this).css("color","#FF0000");
-},function(){
-	$(this).css("color","#999");
-}); */
-$('#navitems a').hover(function(){
-	$(this).css("color","#FF0000");
-},function(){
-	$(this).css("color","#333");
-});
-/* $('.address').hover(function(){
-	$(this).css("background","#fff");
-},function(){
-	$(this).css("background","#e3e4e5");
-	
-}); */
-//购物车触摸效果
-$('#settleup').hover(function(){
-	$('#settleup .dropdown-layer').css("display","block");
-	$('#settleup .cw-icon').addClass("cartborder");
-	cw-icon
-},function(){
-	$('#settleup .dropdown-layer').css("display","none");
-	$('#settleup .cw-icon').removeClass("cartborder");
-});
-/*搜索框*/
-//获取淘宝接口
-$.ajax({ url: "https://suggest.taobao.com/sug?code=utf-8&q=啊啊啊啊啊啊啊&callback=text", 
-	dataType:'jsonp',
-	type:"get",
-	success: function(data){
-    console.log(data);
-}});
-/* function jd(data){
-	var $arr=data.result;
-	var $html='';
-	for(var $i=0;$i<$arr.length;$i++){		
-		$html+='<li><a href="https://search.jd.com/Search?keyword='+arr[i][0]+'%E7%94%B5%E6%B1%A0&enc=utf-8&suggest=1.def.0.V04&wq=aaaa&pvid=d6346556e6ea4ee084d83c28b04c954e">'+arr[i][0]+'</a></li>';
-	}
-	$('#search .from #ul').html($html);
-}
-$('#search .from .text').input=function(){
-			var $cs=document.createElement('script');
-			$cs.src='https://dd-search.jd.com/?terminal=pc&newjson=1&ver=2&zip=1&key='+$(this).value+'&pvid=d6346556e6ea4ee084d83c28b04c954e&t=1519121545823&curr_url=www.jd.com%2F&callback=jd';
-			document.body.appendChild($cs);
-	} */
-/*轮播图*/
-/* var timer=setInterval($fn,3000);
-$('.fs_col2').hover(function(){
-    		$('.banner a').css("display","block");
-    		clearInterval(timer);
-    	},function(){
-    		$('.banner a').css("display","none");
-    		timer=setInterval($fn,3000);
- });
- 
-  $('.banner .prev').click($fn)
-    	
-    	
-    	function $fn(){
-    		co(1);
-    		$('.banner .scroll img').each(function(){
-    			if($(this).css("left")=="0px"){
-    				$(this).animate({
-    					left:-520
-    				},function(){
-      					$(this).css("left","590px")
-    				})
-    				if($('.banner .scroll img').index($(this))==7){
-    					$('.banner .scroll img').eq(0).animate({
-    						left:0
-    					})
-    				}
-    				else{
-    					//$(this).next().css("left","520px")
-    					$(this).next().animate({
-    					left:0
-    				})
-    				}
-    			}
-    		})
-    		}
- 		
-    	$('.banner .next').click(function(){
-    		co(-1);
-    		$('.banner .scroll img').each(function(){
-    			if($(this).css("left")=="0px"){
-    				$(this).prev().css("left","-590px")
-    				$(this).animate({
-    					left:590
-    				})
-    				if($('.banner .scroll img').index($(this))==0){
-    					$('.banner .scroll img').eq(7).css("left","-590px")
-    					$('.banner .scroll img').eq(7).animate({
-    						left:0
-    					})
-    				}
-    				else{
-    					$(this).prev().animate({
-    					left:0
-    				})
-    				}
-    			}
-    		})
-			})
-    	function co(a){
-    		$('.banner .btn span').css("background-color","#666")
-    		$('.banner .scroll img').each(function(){
-    			if($(this).css("left")=="0px"){ 
-    				if($('.banner .scroll img').index($(this))==0&&a<0){
-    					$('.banner .btn span').eq(7).css("background-color","#fff");
-    				}else if($('.banner .scroll img').index($(this))==7&&a>0){
-    					$('.banner .btn span').eq(0).css("background-color","#fff");
-    				}
-    				else{
-    					$('.banner .btn span').eq($('.scroll img').index($(this))+a).css("background-color","#fff");
-    				}
-    			}
-    		})
-    	}
-    	
-    	$('.banner .btn span').click(function(){
-    		$('.banner .btn span').css("background-color","#666");
-    		$(this).css("background-color","#fff");
-    		var $in=$('.banner .btn span').index($(this));   		
-    		var $ie=0;   		
-    		$('.banner .scroll img').each(function(){
-    			if($(this).css("left")=="0px"){ 
-    				$ie=$('.banner .scroll img').index($(this));
-    			}});
-    		if($in<$ie){
-    			$('.banner .scroll img').eq($in).css("left","-590px");
-    			$('.banner .scroll img').eq($in).animate({
-    				left:0,
-    			});
-    			$('.banner .scroll img').eq($ie).animate({
-    				left:590,
-    			})
-    		}else if($ie<$in){
-    			$('.banner .scroll img').eq($in).css("left","590px");
-    			$('.banner .scroll img').eq($in).animate({
-    				left:0,
-    			});
-    			$('.banner .scroll img').eq($ie).animate({
-    				left:-590,
-    			})
-    		}
-    	}) */
-    //顶部固定搜索框	
-$(window).scroll(function(){
-			if($(window).scrollTop()>=400){
-				$('#search-box').css('display','block')
-			}else{
-				$('#search-box').css('display','none')
-			}
+;(function(){
+	/* 加载头脚 */
+	$('#tou').load('top.html');
+	$("#jiao").load('footer.html');
+})()
+;(function(){
+	//购物车触摸效果
+	$('#settleup').hover(function() {
+		$('#settleup .dropdown-layer').css("display", "block");
+		$('#settleup .cw-icon').addClass("cartborder");
+	}, function() {
+		$('#settleup .dropdown-layer').css("display", "none");
+		$('#settleup .cw-icon').removeClass("cartborder");
+	});
+})()
+/* 顶部LOGO触摸变化 */
+;(function(){
+	var logotimer =null;
+	var logocount= 0;
+	/* btn来约束结束方式，btn2来约束事件未结束时无法添加下一个定时器 */
+	var logobtn=true;
+	var logobtn2=true;
+	$('#logo').hover(function(){
+		if(logobtn2==true){
+			logobtn2=false;
+			logobtn=false;
+			logocount= 0;
+			logotimer=setInterval(function(){
+				logocount++;
+				if(logocount>45&&logobtn==true){
+					$('#logo .logo-a span').hide();
+					$('#logo .logo-a').css('background-image','url(img/sprite.head.png)')
+					clearInterval(logotimer);
+					logobtn2=true;
+				}
+			},100)
+			/* 解决GIF图片 因为缓存之加载一次的在路径后拼接随机数 */
+			$('#logo .logo-a').css('background-image',`url(img/5b5ede77Nb463ad3c.gif?${Math.random()})`)
+			$('#logo .logo-a span').delay(2000).show(0);
 		}
-		);
+			
+	},function(){
+		logobtn=true;
+	});
+})()
+/*搜索框*/
+//获取淘宝接口  
+;
+(function() {
+	$('#search input').on('input', function() {
+		$.ajax({
+			url: "https://suggest.taobao.com/sug?code=utf-8&q=" + $('#search input').val() + "&callback=text",
+			dataType: 'jsonp',
+			type: "get",
+			success: function(data) {
+				//console.log(data.result);
+				$('#ul1').find('li:not(#offsearch)').remove();
+				$.each(data.result, function(i, val) {
+					$('#ul1').prepend('<li><span>' + val[0] + '</span><span>约' + val[1] + '个商品</span></li>');
+				})
+				$('#ul1').show();
+			},
+		});
+	})
+	/* 点击关闭  关闭搜索下拉 */
+	$('#ul1 #offsearch span').on('click', function() {
+		$('#ul1').hide();
+	});
+	/* 点击生成的列表 让输入框中的文字等于那个 */
+	$('#ul1').on('click', 'li:not(#offsearch)', function() {
+		var str = $(this).find('span:first').html();
+		$('#search input').val(str);
+	})
+	/* 时间委托 点击搜索下拉 搜索框内容改变*/
+	/* $('ul').delegate('li:not(#offsearch)', 'click', function() {
+		var str = $(this).find('span:first').html();
+		$('#search input').val(str);
+
+	}); */
+	/* 解决瞬间失去焦点无法触发上面的事件委托定时器模拟异步 */
+	$('#search input').on('blur', function() {
+		var timer = setTimeout(function() {
+			$('#ul1').hide();
+			clearTimeout(timer);
+		}, 200);
+
+	});
+})()
+
+/*轮播图和左右*/
+;
+(function() {
+	/* 二级导航 */
+	/* 轮播透明切换 */
+	var $box = $('.fs_col2');
+	var $btns = $('.banner .btn span');
+	var $pics = $('.banner .scroll img');
+	var $left = $('.banner .prev');
+	var $right = $('.banner .next');
+	var $timer = null;
+	var $autoplaytimer = null;
+	var $num = 0;
+	/* 自动轮播 */
+	$box.hover(function() {
+		$('.banner a').css("display", "block");
+		clearInterval($autoplaytimer);
+	}, function() {
+		$('.banner a').css("display", "none");
+		$autoplaytimer = setInterval(function() {
+			$right.click();
+		}, 3000);
+	});
+	$('.banner a').hover(function() {
+		$(this).css("background-position-x", "left");
+	}, function() {
+		$(this).css("background-position-x", "right");
+	});
+	/* 小圆圈触摸 */
+	function change() {
+		$btns.eq($num).addClass('hover1').siblings('span').removeClass('hover1');
+		$pics.eq($num).animate({
+			opacity: 1
+		}).siblings('img').animate({
+			opacity: 0
+		});
+	}
+	$btns.hover(function() {
+		$num = $(this).index(); //当前的索引
+		$timer = setTimeout(function() {
+			change();
+		}, 400)
+	}, function() {
+		clearTimeout($timer);
+	});
+	$right.on('click', function() {
+		$num++;
+		if ($num > $btns.length - 1) {
+			$num = 0;
+		}
+		change();
+	});
+	$left.on('click', function() {
+		$num--;
+		if ($num < 0) {
+			$num = $btns.length - 1;
+		}
+		change();
+	});
+	$autoplaytimer = setInterval(function() {
+		$right.click();
+	}, 3000);
+	/* 轮播右边TAB切换 */
+	var $tab1 = $('#J_news .mod_tab .news_first');
+	var $tab2 = $('#J_news .mod_tab .news_last');
+	var $tab1a = $('#J_news .mod_tab_content div:first');
+	var $tab2a = $('#J_news .mod_tab_content div:last');
+	var $tabline = $('#tabline');
+	$tab1.on('click', function() {
+		$tab1a.show();
+		$tab2a.hide();
+		$tabline.css('margin-left', 13)
+	});
+	$tab2.on('click', function() {
+		$tab2a.show();
+		$tab1a.hide();
+		$tabline.css('margin-left', 67)
+	});
+})()
 
 
+//顶部固定搜索框	
+;
+(function() {
+	$(window).scroll(function() {
+		if ($(window).scrollTop() >= 400) {
+			$('#search-box').css('display', 'block')
+		} else {
+			$('#search-box').css('display', 'none')
+		}
+	});
+})()
+;(function(){
+	//倒计时
+	var nowTime = new Date();
+	var futureTime = new Date('2019-6-20 16:37:00');
+	var a = parseInt((futureTime - nowTime) / 1000);
+	var shi = document.querySelector('#shi');
+	var fen = document.querySelector('#fen');
+	var miao = document.querySelector('#miao');
+	
+	function daojishi(times) {
+		var timer = null;
+		timer = setInterval(function() {
+			var hour = 0;
+			var minute = 0;
+			var second = 0; //时间默认值
+			if (times > 0) {
+				day = Math.floor(times / (60 * 60 * 24));
+				hour = Math.floor(times / (60 * 60)) - (day * 24);
+				minute = Math.floor(times / 60) - (day * 24 * 60) - (hour * 60);
+				second = Math.floor(times) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+			}
+			if (hour <= 9) hour = '0' + hour;
+			if (minute <= 9) minute = '0' + minute;
+			if (second <= 9) second = '0' + second;
+			shi.innerHTML = hour;
+			fen.innerHTML = minute;
+			miao.innerHTML = second;
+			times--;
+		}, 1000);
+		if (times <= 0) {
+			clearInterval(timer);
+		}
+	}
+	daojishi(a);
+})()
+/* 秒杀效果 */
+;
+(function() {
+	
+	
+	//中间无缝切换  跳转要写在animate 的回调函数中  不然异步先执行了
+	$('#skright').on('click', function() {
+		var aleft = $('.sk_list .sk_list_inner').position().left;
+		aleft -= 800;
+		$('.sk_list .sk_list_inner').animate({
+			left: aleft,
+		}, 400, function() {
+			if (aleft <= -3200) {
+				aleft = -800;
+				$('.sk_list .sk_list_inner').css('left', aleft)
+			}
+		});
+	})
+	$('#skleft').on('click', function() {
+		var aleft = $('.sk_list .sk_list_inner').position().left;
+		aleft += 800;
+		$('.sk_list .sk_list_inner').animate({
+			left: aleft,
+		}, 400, function() {
+			if (aleft >= 0) {
+				aleft = -2400;
+				$('.sk_list .sk_list_inner').css('left', aleft)
+			}
+		});
+	})
+	//右边自动轮播
+	var num = 0;
+	var libtimer = null
+
+	function lbqh() {
+		lbtimer = setInterval(function() {
+			num--;
+			$('#miaoshalb').animate({
+				left: num * 180,
+			}, 400, function() {
+				if (num <= -2) {
+					num = 0;
+					$('#miaoshalb').css('left', num * 180);
+					$('#miaosha2').addClass('miaoshabg');
+					$('#miaosha1').removeClass('miaoshabg');
+				} else {
+					$('#miaosha1').addClass('miaoshabg');
+					$('#miaosha2').removeClass('miaoshabg');
+				};
+			});
+		}, 2000);
+	}
+	lbqh();
+	$('.slider_indicators #miaosha1').hover(function() {
+		clearInterval(lbtimer);
+		num = 0;
+		$('#miaosha1').addClass('miaoshabg');
+		$('#miaosha2').removeClass('miaoshabg');
+		$('#miaoshalb').animate({
+			left: 0,
+		}, 400);
+	}, function() {
+		lbqh();
+	});
+	$('.slider_indicators #miaosha2').hover(function() {
+
+		clearInterval(lbtimer);
+		num = -1
+		$('#miaosha2').addClass('miaoshabg');
+		$('#miaosha1').removeClass('miaoshabg');
+		$('#miaoshalb').animate({
+			left: -180,
+		}, 400);
+	}, function() {
+		lbqh();
+	});
+
+})()
+/* 小模块tab切换 */
+;(function(){
+	//alert(123);
+	var $taba =$('#xiaotab1 .tab_head_item a');
+	var $tabb =$('#xiaotab2 .tab_body_item');
+	
+	$taba.hover(function(){
+		//console.log($taba.index($(this)));
+		$(this).css('color','#e33333') 
+		$tabb.hide();
+		$tabb.eq($taba.index($(this))).show();
+	},function(){
+		$taba.css('color','#666') 
+	})
+})()
 /*楼梯效果*/
-  
-  var $tops=[];
-      $.each($('.floors>div'),function(i,v){
-        $tops.push($(this).offset().top);
-      });
-      //console.log($tops);
-        //解决滚动条事件问题:到达不了最后一个楼梯
-        $tops.push(10000);
-$('louti a').hover(function(){
-	$(this).css("color","#FF0000");
-},function(){
-	$(this).css("color","white");
-});
 
+;
+(function() {
+	var $tops = [];
+	$.each($('.floors>div'), function(i, val) {
+		$tops.push($(this).offset().top);
+	});
+	//console.log($tops);
+	var $smalllouti = $('.louti li').not('.louti-last-li');
+	$smalllouti.on('click', function() {
+		var $index = $(this).index();
+		var $top = $tops[$index];
+		$('body,html').animate({
+			scrollTop: $top - 50
+		}, 400);
+	});
+	/* 滚动加类 */
+	$(window).on('scroll', function() {
+		var $top1 = $(window).scrollTop() + 400;
+		var $top2 = $(window).scrollTop();
+		if ($top2 > 400) {
+			$('.louti').show();
+		} else {
+			$('.louti').hide();
+		}
+		$.each($tops, function(i) {
+			//console.log($tops[i]);
+			if ($top1 > $tops[i]) {
+				$smalllouti.eq(i).addClass('bg-red').siblings().removeClass('bg-red');
+			} else if ($top1 < $tops[0] + 400) {
+				$smalllouti.eq(0).addClass('bg-red').siblings().removeClass('bg-red');
+			}
+		});
+	});
 
-      var $smalllouti=$('.louti li').not('.louti-last-li');
-      $smalllouti.on('click',function(){
-        var $index=$(this).index();
-        // $(this).addClass('bg-red').siblings().removeClass('bg-red');
-        var $top=$tops[$index];
-        // $(window).scrollTop($top-50);
-        $('body,html').animate({
-          scrollTop:$top-50
-        },400);
-      });
+	//返回顶部
+	$('.louti-last-li').on('click', function() {
+		$('html,body').animate({
+			scrollTop: 0
+		}, 400);
+	});
+})();
 
+/*生成商品列表*/
+;(function() {
+	$.ajax({
+		type: 'post',
+		url: '../php/goods.php',
+		success: function(d) {
+			$arr = JSON.parse(d);
+			//console.log($arr);
+			/*生成商品列表*/
+			$.each($arr,function(i,val){
+				$('.more_inner ul').append('<li><a href="details.html?sid='+ $arr[i].sid +'"><img class="lazy" data-original="' + $arr[i].url + '"/><div class="xuanran"><p>' + $arr[i].title + '</p></div><em>' + $arr[i].price + '</em></a></li>'
+					);
+			});
+			/* for (var i = 0; i < $arr.length; i++){
+				
+			} */
+			$('.more_inner ul li img').css({
+				'width': '170px',
+				'height': '170px',
+				'margin':'20px auto'
+			});
+			$('.more_inner ul li .lazy').lazyload({
+				effect: "fadeIn"
+			});
+			/* 渲染文字超过两行用省略号 */
+			$(".more_inner ul li .xuanran").each(function (i) {
+				var divH = $(this).height();
+				var $p = $(this).find('p');
+				while ($p.outerHeight() > divH) {
+					$p.text($p.text().replace(/(\s)*([a-zA-Z0-9]+|\W)(\.\.\.)?$/, "..."));
+				};
+			});
+			$('.more_inner ul li').hover(function() {
+				$(this).css({
+					'box-sizing': 'border-box',
+					'border': '1px solid red'
+				})
+			}, function() {
+				$(this).css('border', 'none');
+				$(this).css({
+					'border-bottom': '1px solid #f4f4f4',
+					'border-right': '1px solid #f4f4f4'
+				});
+			})
+		}
+	})
+})();
+/* 图片触摸亮暗 */
+;(function(){
 
-      var firstfloor=$('.floor-one').offset().top;
-      $(window).on('scroll',function(){
+	$('.floors img').hover(function(){
+		$(this).addClass('viewgray');
+	},function(){
+		$(this).removeClass('viewgray');
+	})
+})()
+/* 登陆推出 */
+;(function(){
+	if(getcookie('username')){
+		let name=getcookie('username');
+		$('#login').hide();
+		$('#login1').show();
+		$('#login1 .user1').html(name+'，欢迎登陆');
+	}
+	$('#login1 .close1').on('click',function(){
+		delcookie('username');
+		window.location.reload();
+	})
 
-        var $top=$(this).scrollTop()+400;
-        if($top>firstfloor){
-          $('.louti').show();
-        }else{
-          $('.louti').hide();
-        }
-
-        $.each($tops,function(i){
-          if($top>$tops[i]&&$top<$tops[i+1]){
-            $smalllouti.eq(i).addClass('bg-red').siblings().removeClass('bg-red');
-          }
-        });
-      });
-
-      //返回顶部
-      $('.louti-last-li').on('click',function(){
-        $('html,body').animate({
-          scrollTop:0
-        },400);
-      });
-      /*生成商品列表*/
-// (function() {
-// 	$.ajax({
-// 		type: 'post',
-// 		url: '../php/goods.php',
-// 		success: function(d) {
-// 			$arr = JSON.parse(d);
-// 			console.log($arr);
-// 			/*生成商品列表*/
-// 			for(var j=0;j<11;j++){
-// 				for(var i=0;i<5;i++){
-// 					$('.more_inner ul').append('<li><a><dl><dt><img src="'+$arr[i].url+'"/></dt><dd></dd></dl><p class="line2"><span>评价2</span><span>收藏：2510</span></p><p class="line3"><span></span><em>￥3000</em><i>月售4笔</i></p></a></li>');
-// 				}
-// 			}
-// 			$('.more_inner ul li img').css({'width':'228px','height':'250px'})
-// 			$('.more_inner ul li').hover(function(){
-// 				$(this).css({'box-sizing':'border-box','border':'1px solid red'})
-// 			},function(){
-// 				$(this).css('border','none');
-// 				$(this).css({'border-bottom': '1px solid #f4f4f4','border-right':'1px solid #f4f4f4'});
-// 			})
-// 					}
-// 				})
-// })();
-
+})()
