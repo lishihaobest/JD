@@ -1,0 +1,1 @@
+require(['index','details','cart','register','login']);

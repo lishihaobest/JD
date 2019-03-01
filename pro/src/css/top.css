@@ -1,0 +1,422 @@
+body{
+	background-color: #fff;
+	font: 12px/1.5 Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif;
+	color: #666;
+}
+
+body,
+html,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+dt,
+dd,
+fieldset,
+input,
+form {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+b,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i.em {
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+input {
+	outline: none;
+	border: none;
+}
+
+img {
+	border: 0;
+	display: block;
+}
+
+.iconfont {
+	font-family: iconfont;
+	font-style: normal;
+}
+
+ul {
+	display: block;
+	list-style-type: disc;
+}
+
+@font-face {
+	font-family: iconfont;
+	src: url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/fonts/iconfont.eot);
+	src: url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/fonts/iconfont.eot?#iefix) format("embedded-opentype"), url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/fonts/iconfont.woff) format("woff"), url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/fonts/iconfont.ttf) format("truetype"), url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/images/iconfont.svg#iconfont) format("svg");
+}
+
+.cw-icon {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	float: left;
+	border: 1px solid #e3e4e5;
+}
+
+img {
+	border: 0;
+	vertical-align: middle;
+}
+
+a {
+	color: #666;
+	text-decoration: none;
+}
+
+a img {
+	border: 0;
+}
+
+.btn-img,
+.button {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	text-align: center;
+	cursor: pointer;
+}
+
+button {
+	cursor: pointer;
+}
+
+/* 顶部 */
+#shortcut {
+	border-bottom: 1px solid #ddd;
+	background-color: #e3e4e5;
+	height: 30px;
+}
+
+#shortcut .w {
+	height: 30px;
+	line-height: 30px;
+	color: #999;
+}
+
+/* 顶部字体变色 */
+#shortcut a {
+	color: #999;
+}
+
+#shortcut a:hover {
+	color: red;
+}
+
+#shortcut li {
+	float: left;
+}
+
+#shortcut .cw-icon {
+	height: 28px;
+	line-height: 28px;
+}
+
+#shortcut .dt {
+	padding-left: 7px;
+	padding-right: 7px;
+}
+
+#shortcut .dd {
+	line-height: 24px;
+}
+
+#shortcut li.spacer {
+	overflow: hidden;
+	margin: 11px 5px 0;
+	width: 1px;
+	height: 10px;
+	background-color: #ccc;
+}
+
+#shortcut .dropdown-layer {
+	top: 30px;
+}
+
+#shortcut .style-red {
+	color: #f10215;
+}
+
+.w {
+	margin: auto;
+	width: 1190px;
+}
+
+.index {
+	background-color: #f0f3ef;
+}
+
+.dropdown-layer {
+	display: none;
+	position: absolute;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+#ttbar-mycity {
+	margin-left: 200px;
+	position: relative;
+	z-index: 21;
+}
+
+#ttbar-mycity .iconfont {
+	font-size: 14px;
+	color: #f10215;
+	margin-right: 4px;
+}
+
+#ttbar-mycity .citylist {
+	display: none;
+	position: absolute;
+	left: 0;
+	width: 300px;
+	padding: 10px;
+	height: 244px;
+	z-index: 101;
+}
+
+#ttbar-mycity .dd {
+	left: 0;
+	width: 300px;
+	padding: 10px;
+}
+
+/* 让导航遮住边框的类 */
+.wukuang {
+	background: white;
+	height: 30px !important;
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #fff;
+	z-index: 100;
+}
+
+/* 购物车添加边框类 */
+#settleup .cartborder {
+	height: 34px;
+	border: 1px solid #ccc;
+	border-bottom-color: #fff;
+	z-index: 999;
+}
+
+#search-box {
+	border-bottom: 2px solid red;
+}
+
+#search-m {
+	height: 48px;
+	position: relative;
+}
+
+#search-m input {
+	background: #efefef;
+	;
+}
+
+#search-box {
+	position: fixed;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	background-color: #fff;
+	z-index: 999;
+	display: none;
+}
+
+/* #search-m:after {
+				content: "";
+				display: block;
+			} */
+
+#search-m .search_logo {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 4px;
+	width: 125px;
+	height: 40px;
+}
+
+#search-m .form {
+	position: absolute;
+	top: 8px;
+	left: 320px;
+	width: 550px;
+	height: 35px;
+}
+
+.search_logo_lk {
+	background-position: -195px 0;
+	overflow: hidden;
+	display: block;
+	width: 125px;
+	height: 40px;
+	background-image: url(//misc.360buyimg.com/mtd/pc/index_2017/2.0.1/static/images/sprite.head.png);
+	text-indent: -999px;
+
+}
+
+#ttbar-mycity .item {
+	float: left;
+	width: 60px;
+	padding: 2px 0;
+}
+
+#ttbar-mycity .item a.selected {
+	background-color: #f10215;
+	color: #fff;
+}
+
+#ttbar-mycity .item a {
+	float: left;
+	padding: 0 8px;
+}
+
+.ci-left,
+.ci-right,
+.dd-spacer {
+	display: none !important;
+}
+
+.shortcut_btn {
+	position: relative;
+	z-index: 21;
+}
+
+#login,
+#login1 {
+	margin-right: 8px;
+	z-index: 20;
+}
+
+.fr .cw-icon {
+	padding-right: 20px !important;
+}
+
+.fr .iconfont {
+	position: absolute;
+	right: 5px;
+	top: 10px;
+	width: 12px;
+	height: 12px;
+	line-height: 12px;
+}
+
+#myjd .dropdown-layer {
+	left: 0;
+	width: 280px;
+}
+
+#myjd .myjdlist {
+	padding: 10px 0 10px 15px;
+	overflow: hidden;
+}
+
+#myjd .myjdlist .fore1,
+#myjd .myjdlist .fore2 {
+	float: left;
+	width: 126px;
+}
+
+/* 让导航遮住边框的类 */
+.wukuang {
+	background: white;
+	height: 30px !important;
+	border: 1px solid #ccc;
+	border-bottom: 1px solid #fff;
+	z-index: 100;
+}
+
+#serv .dd {
+	right: 0;
+	width: 170px;
+	padding: 10px 0;
+}
+
+#serv .item-client,
+#serv .item-business {
+	padding-left: 15px;
+	font-weight: 700;
+	color: #666;
+}
+
+#serv .item {
+	display: inline-block;
+	width: 60px;
+	padding-left: 15px;
+}
+
+#serv .item-business {
+	margin-top: 5px;
+	padding-top: 5px;
+	border-top: 1px dotted #eee;
+}
+
+#navs .dd {
+	right: -84px;
+	width: 1188px;
+	padding: 15px 0;
+}
+
+#navs dl {
+	float: left;
+	width: 255px;
+	padding-left: 20px;
+	border-left: 1px solid #eee;
+}
+
+#navs dl.fore1 {
+	border-left: none;
+	width: 340px;
+}
+
+#navs dt {
+	margin-bottom: 5px;
+	font-weight: 700;
+	color: #666;
+}
+
+#navs dd {
+	overflow: hidden;
+}
+
+#navs .item {
+	overflow: hidden;
+	float: left;
+	width: 85px;
+	white-space: nowrap;
+}

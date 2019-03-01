@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/registor.css" />
+		<link rel="icon" href="fonts/favicon.ico" mce_href="fonts/favicon.ico" type="image/x-icon" />
+		
+	</head>
+	<body>
+		<!-- 遮罩层 -->
+		<div class="ui-mask" style="position: absolute; left: 0px; top: 0px; opacity: 0.15; z-index: 9998; background-color: rgb(0, 0, 0); width: 1519px; height: 959px; display: none;"></div>
+		<!-- 协议 -->
+		<div class="agree"></div>
+		<!-- 头部 -->
+		<div class="header">
+			<div class="w">
+					<a class="logopic" href="index.html"></a>
+					<div class="logo-title">欢迎注册</div>
+				<div class="login">已有账号？ <a href="https://passport.jd.com/new/login.aspx?ReturnUrl=https://www.jd.com/">请登录&gt;</a></div>
+			</div>
+		</div>
+		<!-- 头部结束 -->
+		<!-- 进度条 -->
+		<div class="process">
+			<div class="no1">
+				<span>1</span>
+				<p>验证手机号</p>
+			</div>
+			<div class="line"></div>
+			<div class="no2">
+				<span>2</span>
+				<p>填写账号信息</p>
+			</div>
+			<div class="line line2"></div>
+			<div class="no3">
+				<span>3</span>
+				<p>注册成功</p>
+			</div>
+		</div>
+		<!-- 进度条结束 -->
+		<!-- 表单验证 -->
+		<div class="container">
+			<div class="register">
+				<!--用户名-->
+				<form method="post" action="../php/register.php">
+					<div class="register-box">
+					<!--表单项-->
+					<div class="box default">
+						<label for="userName">　&nbsp;用&nbsp;户&nbsp;名</label>
+						<input type="text" id="userName" name="username" placeholder="您的账户名和登录名"  autocomplete="off"/>
+						<i></i>
+					</div>
+					<!--提示信息-->
+					<div class="tip">
+						<i></i>
+						<span></span>
+					</div>
+				</div>
+				<!--设置密码-->
+				<div class="register-box">
+					<!--表单项-->
+					<div class="box default">
+						<label for="pwd">设&nbsp;置&nbsp;密&nbsp;码</label>
+						<input type="password" id="pwd" name="password" placeholder="建议至少两种字符组合" />
+						<i></i>
+					</div>
+					<!--提示信息-->
+					<div class="tip">
+						<i></i>
+						<span></span>
+					</div>
+				</div>
+				<!--确认密码-->
+				<div class="register-box">
+					<!--表单项-->
+					<div class="box default">
+						<label for="pwd2">确&nbsp;认&nbsp;密&nbsp;码</label>
+						<input type="password" id="pwd2" placeholder="请再次输入密码" />
+						<i></i>
+					</div>
+					<!--提示信息-->
+					<div class="tip">
+						<i></i>
+						<span></span>
+					</div>
+				</div>
+				<!--设置密码-->
+				<div class="register-box">
+					<!--表单项-->
+					<div class="box default">
+						<label for="email">邮&nbsp;箱&nbsp;验&nbsp;证</label>
+						<input type="text" id="email" name="email" placeholder="请输入邮箱" autocomplete="off" />
+						<i></i>
+					</div>
+					<!--提示信息-->
+					<div class="tip">
+						<i></i>
+						<span></span>
+					</div>
+				</div>
+				<!--手机验证-->
+				<div class="register-box">
+					<!--表单项-->
+					<div class="box default">
+						<label for="mobile">手&nbsp;机&nbsp;验&nbsp;证</label>
+						<input type="text" id="mobile" placeholder="请输入手机号" autocomplete="off" />
+						<i></i>
+					</div>
+					<!--提示信息-->
+					<div class="tip">
+						<i></i>
+						<span></span>
+					</div>
+				</div>
+				 <!--注册协议-->
+				<div class="register-box xieyi">
+					<!--表单项-->
+					<div class="box default">
+						<input type="checkbox" id="ck" />
+						<span>我已阅读并同意<a href="#">《京东用户注册协议》</a></span>
+					</div>
+					<!--提示信息-->
+					<div class="tip">
+						<i></i>
+						<span></span>
+					</div>
+				</div>
+				<!--注册-->
+				<button id="btn" class="sub" name="sub">注册</button>
+				</form>
+				
+			</div>
+		</div>
+		<!-- 底部 -->
+		<!--底部连接-->
+		<div class="w">
+			<div id="footer">
+				<div class="links">
+					<a href="javascript:;">
+						关于我们
+					</a>
+					|
+					<a href="javascript:;">
+						联系我们
+					</a>
+					|
+					<a href="javascript:;">
+						人才招聘
+					</a>
+					|
+					<a href="javascript:;">
+						商家入驻
+					</a>
+					|
+					<a href="javascript:;">
+						广告服务
+					</a>
+					|
+					<a href="javascript:;">
+						手机京东
+					</a>
+					|
+					<a href="javascript:;">
+						友情链接
+					</a>
+					|
+					<a href="javascript:;">
+						销售联盟
+					</a>
+					|
+					<a href="javascript:;">
+						京东社区
+					</a>
+					|
+					<a href="javascript:;">
+						京东公益
+					</a>
+					|
+					<a href="javascript:;">English Site</a>
+				</div>
+				<div class="copyright">
+					Copyright&nbsp;©&nbsp;2004-2019&nbsp;&nbsp;京东JD.com&nbsp;版权所有
+				</div>
+			</div>
+		</div>
+<!-- 		<script src="script/thirdplugins/jquery.js"></script>
+		<script src="script/js/register.js"></script> -->
+		<script src="script/thirdplugins/require.js" defer async="true" data-main="script/js/main.js"></script>
+	</body>
+</html>
